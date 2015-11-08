@@ -6,13 +6,26 @@ class BasicCal
   end
   
   def mean(val)
-    val = self.valToArray(val,4)
-    cnt = 0.0
+    sum = 0.0
     for i in 0..val.length()-1
-      cnt += 1
       sum += Integer(val[i])
     end
     
-    return sum / cnt
+    return sum / (val.length())
+  end
+  
+  def var(val)
+    mean = self.mean(val)
+    
+    sum = 0.0
+    
+    for i in 0..val.length() - 1
+      val[i] = (Integer(val[i]) - mean) **  2
+      
+      sum += val[i]
+    end
+    
+    return sum / (val.length() - 1)
+    
   end
 end
