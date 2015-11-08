@@ -21,6 +21,15 @@ class Routes
       elsif val =~ /var/
         val = @basicCal.valToArray(val,3)
         self.display(@basicCal.var(val))
+      elsif val =~ /std/
+        val = @basicCal.valToArray(val,3)
+        self.display(@basicCal.std(val))
+      elsif val =~ /sqrt/
+        val = @basicCal.valToArray(val, 4)
+        self.display(@basicCal.sqrt(val))
+      elsif val =~ /sq/
+        val = @basicCal.valToArray(val, 2)
+        self.display(@basicCal.sq(val))
       end
     else
       print "Your input is in a bad form\n"

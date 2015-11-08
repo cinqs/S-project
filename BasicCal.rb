@@ -28,4 +28,25 @@ class BasicCal
     return sum / (val.length() - 1)
     
   end
+  
+  def std(val)
+    return(self.var(val) ** (1.0 / 2))
+  end
+  
+  def sq(val)
+    for i in 0..val.length() - 1
+      val[i] = (Integer(val[i]) ** 2)
+    end
+    
+    return(val)
+  end
+  
+  def sqrt(val)
+    for i in 0..val.length() - 1
+      val[i] = Integer(val[i]) + 0.0
+      val[i] = (val[i] ** (1.0 / 2))
+    end
+    
+    return(val)
+  end
 end

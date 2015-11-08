@@ -3,3 +3,5 @@
 
 <h2>How to use <i><b>MEAN, VAR</b></i></h2>
 <p>you use the form mean(1,2,3,4,......)</p>
+
+<h3>actually they follow the same principle of <code>fucntionName(val1, val2, val3, ...)</code></h3>
